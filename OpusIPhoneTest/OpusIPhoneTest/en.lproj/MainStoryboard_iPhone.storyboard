@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="CSIViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Initializing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hq-t0-ZeI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="25M-Fo-yw1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IX0-OW-XHu">
+                                <segments>
+                                    <segment title="Local"/>
+                                    <segment title="Encode"/>
+                                    <segment title="Network"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0hq-t0-ZeI" firstAttribute="top" secondItem="3" secondAttribute="top" constant="78" id="EiN-Zx-EXh"/>
+                            <constraint firstAttribute="trailing" secondItem="0hq-t0-ZeI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="T8Y-aM-wSb"/>
+                            <constraint firstAttribute="trailing" secondItem="IX0-OW-XHu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YjA-KT-GcP"/>
+                            <constraint firstAttribute="bottom" secondItem="IX0-OW-XHu" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="kws-ob-4Rp"/>
+                            <constraint firstItem="IX0-OW-XHu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sog-hZ-mnT"/>
+                            <constraint firstItem="0hq-t0-ZeI" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="swh-vm-Au0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="modeControl" destination="IX0-OW-XHu" id="3Ez-Po-cXE"/>
+                        <outlet property="statusLabel" destination="0hq-t0-ZeI" id="Z2N-r9-kOV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="CSIViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CSIViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="modeControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

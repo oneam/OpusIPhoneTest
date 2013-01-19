@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="CSIViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Initializing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwt-Ga-fpH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="S1I-ao-usA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z3g-Xf-d0r">
+                                <segments>
+                                    <segment title="Local Loopback"/>
+                                    <segment title="Encode Loopback"/>
+                                    <segment title="Network Encode"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="z3g-Xf-d0r" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ACx-3u-tUF"/>
+                            <constraint firstItem="Bwt-Ga-fpH" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GBo-7a-abS"/>
+                            <constraint firstAttribute="trailing" secondItem="Bwt-Ga-fpH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Lpb-nQ-Oz5"/>
+                            <constraint firstAttribute="trailing" secondItem="z3g-Xf-d0r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YPf-Cb-poE"/>
+                            <constraint firstItem="Bwt-Ga-fpH" firstAttribute="centerY" secondItem="5" secondAttribute="centerY" type="default" id="ZDd-hu-JZS"/>
+                            <constraint firstItem="z3g-Xf-d0r" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dNk-uV-IpM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="modeControl" destination="z3g-Xf-d0r" id="ggb-dY-8xv"/>
+                        <outlet property="statusLabel" destination="Bwt-Ga-fpH" id="ZIS-Yg-9vA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="-80"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="CSIViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CSIViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="modeControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
